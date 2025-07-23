@@ -14,7 +14,24 @@ struct AltitudeDisplayView: View {
     
     var body: some View {
         let altitudeFeetString = locationManager.altitude.map { String(format: "%.2f", $0 * 3.28084) } ?? "--"
-        Text("Current Altitude: \(altitudeFeetString) feet")
+        ZStack {
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .fill(.clear)
+                .frame(width: 300, height: 300)
+                .glassEffect(.regular.interactive())
+                .shadow(radius: 8)
+            VStack {
+                Text("Current Altitude:")
+                    .font(.title2)
+                    .foregroundStyle(.secondary)
+                Text("\(altitudeFeetString) ft")
+                    .font(.system(size: 48, weight: .bold, design: .rounded))
+                    .frame(maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+            }
+            .padding()
+        }
+        .padding()
     }
 }
 
