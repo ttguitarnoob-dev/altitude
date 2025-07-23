@@ -29,7 +29,7 @@ struct BackgroundView: View {
     let possibleColors: [Color] = [
         Color.green.opacity(0.5), Color.blue.opacity(0.5), Color.brown.opacity(0.5),
         Color.cyan.opacity(0.5), Color.mint.opacity(0.5), Color.yellow.opacity(0.45),
-        Color("Nature1", bundle: nil), Color("Nature2", bundle: nil)
+        
     ]
     
     let symbolCount = Int.random(in: 8...10)
