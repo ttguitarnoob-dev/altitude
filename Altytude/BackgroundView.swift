@@ -69,10 +69,10 @@ struct BackgroundView: View {
             let color = possibleColors.randomElement() ?? Color.green.opacity(0.5)
             let x = CGFloat.random(in: 60...(size.width - 60))
             let y = CGFloat.random(in: 60...(size.height - 60))
-            let dx = CGFloat.random(in: -0.4...0.4)
-            let dy = CGFloat.random(in: -0.4...0.4)
+            let dx = CGFloat.random(in: -0.15...0.15)
+            let dy = CGFloat.random(in: -0.15...0.15)
             let angle = Double.random(in: 0...360)
-            let angularVelocity = Double.random(in: -0.7...0.7)
+            let angularVelocity = Double.random(in: -0.25...0.25)
             return MovingSymbol(
                 symbol: symbolName,
                 color: color,

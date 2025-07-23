@@ -13,7 +13,7 @@ struct AltitudeDisplayView: View {
     @ObservedObject var locationManager: LocationManager
     
     var body: some View {
-        let altitudeFeetString = locationManager.altitude.map { String(format: "%.2f", $0 * 3.28084) } ?? "--"
+        let altitudeFeetString = locationManager.altitude.map { String(Int(round($0 * 3.28084))) } ?? "--"
         ZStack {
             RoundedRectangle(cornerRadius: 24, style: .continuous)
                 .fill(.clear)
